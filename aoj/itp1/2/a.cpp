@@ -1,7 +1,18 @@
 #include <iostream>
+#include <string>
 
 int main()
 {
-  std::cout << "Hello World" << std::endl; // output text
-  return 0; // return 0 to execute environment
+  int a, b;
+  std::cin >> a >> b;
+
+  std::string sym = "==";
+  if (a < b) {
+    sym = '<';
+  } else if (a > b) {
+    sym = '>';
+  }
+
+  std::cout << "a " << sym << " b" << std::endl;
+  return 0;
 }

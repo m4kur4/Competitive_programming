@@ -1,14 +1,28 @@
 #include <iostream>
-#include <cmath>
+
+using namespace std;
 
 int main()
 {
-  int s;
-  std::cin >> s;
+  int W, H, x, y, r;
+  cin >> W >> H >> x >> y >> r;
+  
+  bool isOverLeft = r < x;
+  bool isOverRight = (W - x) < r;
+  bool isOverDown = y < r;
+  bool isOverUp = (H - y) < r;
 
-  int hou = std::floor(s / 3600);
-  int min = std::floor(s % 3600 / 60);
-  int sec = std::floor(s % 60);
+  cout << isOverLeft;
+  cout << isOverRight;
+  cout << isOverDown;
+  cout << isOverUp;
 
-  std::cout << hou << ":" << min << ":" << sec << std::endl;
+  string ans = "Yes";
+  if (isOverLeft || isOverRight || isOverDown || isOverUp) {
+    ans = "No";
+  }
+
+  cout << ans << endl;
+
+  return 0;
 }

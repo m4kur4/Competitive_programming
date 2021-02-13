@@ -1,12 +1,16 @@
 #include <iostream>
-#include <iomanip>
-#include <cmath>
+#include <string>
 
 int main()
 {
-  int i;
-  std::cin >> i;
-  // デフォルトだと指数表記になる
-  // 小数表記を修正する
-  std::cout << std::fixed << std::setprecision(0) << std::pow(i, 3) << std::endl;
+  int a, b, c;
+  std::cin >> a >> b >> c;
+
+  std::string ans = "No";
+  if (a < b && b < c) {
+    ans = "Yes";
+  }
+  std::cout << ans << std::endl;
+  
+  return 0;
 }

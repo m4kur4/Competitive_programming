@@ -1,0 +1,9 @@
+{
+  "files.associations": {
+    "*.phl": "php",
+    "*.tpl": "html",
+    "ostream": "cpp",
+    "iostream": "cpp",
+    "vector": "cpp"
+  }
+}

@@ -1,14 +1,29 @@
 #include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <algorithm>
 
 int main()
 {
-  int a, b;
-  std::cin >> a >> b;
-  
-  int area = (a * b);
-  int perimeter = (a + b) * 2;
+  std::string s;
+  std::getline(std::cin, s);
+  std::stringstream ss(s);
+  std::vector<std::string> v;
+  std::string buf;
+  while (std::getline(ss, buf, ' ')) {
+    v.push_back(buf);
+  }
 
-  std::cout << area;
-  std::cout << " ";
-  std::cout << perimeter << std::endl;
+  std::sort(v.begin(), v.end());
+  std::string ans = "";
+  for (int i = 0; i < v.size(); i++) {
+    ans += v[i];
+    if (i != v.size() - 1) {
+      ans += " ";
+    }
+  }
+
+  std::cout << ans << std::endl;
+  return 0;
 }
