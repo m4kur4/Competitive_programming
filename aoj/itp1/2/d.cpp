@@ -7,15 +7,10 @@ int main()
   int W, H, x, y, r;
   cin >> W >> H >> x >> y >> r;
   
-  bool isOverLeft = r < x;
+  bool isOverLeft = x < r;
   bool isOverRight = (W - x) < r;
   bool isOverDown = y < r;
   bool isOverUp = (H - y) < r;
-
-  cout << isOverLeft;
-  cout << isOverRight;
-  cout << isOverDown;
-  cout << isOverUp;
 
   string ans = "Yes";
   if (isOverLeft || isOverRight || isOverDown || isOverUp) {
