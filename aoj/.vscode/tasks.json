@@ -11,7 +11,7 @@
         "-g",
         "\"${file}\"",
         "-o",
-        "exe\\${fileBasenameNoExtension}a.exe"
+        "\"${relativeFileDirname}\\exe\\${fileBasenameNoExtension}.exe\""
       ],
       "group": {
         "kind": "build",
