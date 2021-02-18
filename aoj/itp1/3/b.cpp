@@ -1,12 +1,15 @@
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+#include <bits/stdc++.h>
 
 int main()
 {
+  int cnt = 1;
   int i;
-  std::cin >> i;
-  // デフォルトだと指数表記になる
-  // 小数表記を修正する
-  std::cout << std::fixed << std::setprecision(0) << std::pow(i, 3) << std::endl;
+  while(std::cin >> i) {
+    if (i == 0) {
+      break;
+    }
+    std::cout << "Case " << cnt << ": " << i << std::endl;
+    cnt++;
+  }
+  return 0;
 }
