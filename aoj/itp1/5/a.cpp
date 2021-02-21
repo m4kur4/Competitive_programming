@@ -1,16 +1,25 @@
 #include <bits/stdc++.h>
 
+static void makeRectangle(int h, int w)
+{
+  for (int i = 0; i < h; i++) {
+    for (int k = 0; k < w; k++) {
+      std::cout << '#';
+    }
+    std::cout << std::endl;
+  }
+}
+
 int main()
 {
-  int a, b, d, r;
-  double f;
-  std::cin >> a >> b;
+  int H, W;
+  while (std::cin >> H >> W) {
 
-  d = floor(a / b);
-  r = a % b;
-  f = (double)a / b;
-
-  std::cout << d << " " << r << " " << std::fixed << std::setprecision(5) << f << std::endl;
-
+    if (H == 0 && W == 0) {
+      break;
+    }
+    makeRectangle(H, W);
+    std::cout << std::endl;
+  }
   return 0;
 }

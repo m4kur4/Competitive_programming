@@ -1,24 +1,44 @@
 #include <bits/stdc++.h>
-#include <algorithm>
+
+int include3(int i, int n, int x)
+{
+  if (x % 10 == 3) {
+    std::cout << " " << i;
+    return i + 1;
+  } else {
+    x /= 10;
+    if (x == 0) {
+      return i + 1;
+    } else {
+      return include3(i, n, x);
+    }
+  }
+}
+
+int checkNum(int i, int n, int x)
+{
+  x = i;
+  if (x % 3 == 0) {
+    std::cout << " " << i;
+    return i + 1;
+  } else {
+    return include3(i, n, x);
+  }
+}
 
 int main()
 {
-  int n, temp;
-  int max = -1000000;
-  int min = 1000000;
-  long sum = 0;
-
+  int i = 1;
+  int n, x;
   std::cin >> n;
-  for (int i = 0; i < n; i++) {
-
-    std::cin >> temp;
-
-    min = std::min(temp, min);
-    max = std::max(temp, max);
-    sum += temp;
+  while (true) {
+    x = i;
+    i = checkNum(i, n, x);
+    if (n < i) {
+      std::cout << std::endl;
+      break;
+    }
   }
-
-  std::cout << min << " " << max << " " << sum << std::endl;
 
   return 0;
 }
