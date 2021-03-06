@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\2020_restart\__coder\Competitive_programming\aoj\mylib\test_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\2020_restart\__coder\Competitive_programming\aoj\mylib\test_hello.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\2020_restart\__coder\Competitive_programming\aoj\mylib\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F7C2D3C6-3A9C-3025-A4B9-01653501E421}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
