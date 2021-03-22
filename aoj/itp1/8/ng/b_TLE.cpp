@@ -1,3 +1,10 @@
+/**
+ * 3/22
+ * 
+ * 引数が大きすぎて数値型で扱えないためオーバーフローして無限ループになった
+ * 各桁を足すだけなので、桁を分解するまでは文字列のままでOK
+ * 
+ */
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
