@@ -1,3 +1,4 @@
+// 一つのサイコロに同じ値が複数存在するケースへ対応できていない
 #include <bits/stdc++.h>
 using namespace std;
 
